@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Nerd Arcade</title>
     <style>
-        /* Modern Reset & Background */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), 
-            background-image: url('C:\Users\administrators1\Desktop\Randomness\arcade.jpeg') no-repeat center center fixed; 
-            background-size: cover; 
+            font-family: 'Segoe UI', sans-serif;
+            /* Using a fallback color (dark blue) in case the image fails */
+            background: #16213e; 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: white;
             display: flex;
             flex-direction: column;
@@ -20,19 +22,9 @@
             min-height: 100vh;
         }
 
-        header {
-            margin-top: 50px;
-            text-align: center;
-        }
+        header { margin-top: 50px; text-align: center; }
+        h1 { font-size: 3rem; text-shadow: 0 0 10px #00d2ff; text-transform: uppercase; }
 
-        h1 {
-            font-size: 3rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px #00d2ff;
-        }
-
-        /* The Game Grid */
         .arcade-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -40,52 +32,31 @@
             width: 90%;
             max-width: 1000px;
             margin-top: 40px;
-            padding-bottom: 50px;
         }
 
-        /* Game Card Styling */
         .game-card {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.8); /* Solid dark background so it's visible */
+            border: 2px solid #00d2ff;
             border-radius: 15px;
             padding: 25px;
             text-align: center;
             text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            color: white !important;
+            transition: 0.3s;
         }
 
-        /* Hover Effects */
         .game-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.85);
-            border-color: #00d2ff;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+            background: rgba(0, 210, 255, 0.1);
         }
 
-        .game-card h2 {
-            margin: 15px 0 10px;
-            color: #00d2ff;
-        }
-
-        .game-card p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #bdc3c7;
-        }
-
-        /* Button inside the card */
         .play-btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 25px;
+            padding: 10px 20px;
             background: #e94560;
-            color: white;
             border-radius: 5px;
             font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -93,26 +64,24 @@
 
     <header>
         <h1>The Nerd Arcade</h1>
-        <p>Select a challenge to begin</p>
+        <p>Select a game to play</p>
     </header>
 
     <div class="arcade-grid">
-        
-        <a href="https://laurafaulk.github.io/trivia-game/" class="game-card">
+        <a href="https://laurafaulk.github.io/trivia-repo/" class="game-card">
             <div style="font-size: 50px;">💡</div>
             <h2>Trivia Quiz</h2>
-            <p>Multiple categories to test your general knowledge. High scores saved locally!</p>
-            <span class="play-btn">Play Now</span>
+            <p>Test your knowledge!</p>
+            <div class="play-btn">Play Now</div>
         </a>
 
-        <a href="https://laurafaulk.github.io/jeopardy-game/" class="game-card">
+        <a href="https://laurafaulk.github.io/jeopardy-repo/" class="game-card">
             <div style="font-size: 50px;">🔔</div>
             <h2>Jeopardy</h2>
-            <p>The classic TV experience recreated. And this time you don't have to answer in the form of a question!</p>
-            <span class="play-btn">Play Now</span>
+            <p>The classic quiz game.</p>
+            <div class="play-btn">Play Now</div>
         </a>
-
-        </div>
+    </div>
 
 </body>
 </html>
