@@ -108,12 +108,23 @@
 
 	#villain-hero {
 	    display: block;       /* Centers the image on its own line */
-    	    margin: 20px auto;    /* Adds space above and below the image */
-    	    width: 250px;         /* This makes the image a reasonable size */
+    	    margin: 10px auto;    /* Adds space above and below the image */
+    	    width: 120px;         /* This makes the image a reasonable size */
     	    height: auto;         /* Keeps the image from looking squished */
     	    border-radius: 20px;  /* Softens the corners */
-    	    border: 3px solid #ff007f; /* A neon pink frame to match your vibe */
+	    Background: none;
+    	    border: none;
+	    filter: drop-shadow(0 0 10px #ff007f);
+	    transition: 0.3s;
     	    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6); /* A glowing effect */
+	    mix-blend-mode: multiply; /* This makes white backgrounds disappear */
+    	    /* OR try */
+    	    /* mix-blend-mode: screen; */ /* This makes black backgrounds disappear */
+	}
+
+	#villain-hero:hover {
+    	    transform: scale(1.1); /* Makes him grow slightly when moused over */
+    	    filter: drop-shadow(0 0 20px #ff007f);
 	}
 	}
 
