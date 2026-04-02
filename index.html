@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Nerd Arcade</title>
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <style>
         body {
             margin: 0;
@@ -24,8 +29,25 @@
             min-height: 100vh;
         }
 
-        header { margin-top: 50px; text-align: center; }
-        h1 { font-size: 3rem; text-shadow: 0 0 10px #00d2ff; text-transform: uppercase; }
+        header { margin-top: 60px; text-align: center; }
+        h1 { 
+	    font-family: 'Sour Gummy', sans-serif; 
+            font-size: 6rem; 
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #00d2ff; 
+            text-shadow: 0 0 15px rgba(0, 210, 255, 0.9),
+                         0 0 30px rgba(0, 210, 255, 0.6);
+            margin-bottom: 0;
+        }
+
+        header p {
+            font-family: 'Sour Gummy', sans-serif;
+            font-size: 1.8rem;
+            color: #e94560;
+            margin-top: 10px;
+	}
 
         .arcade-grid {
             display: grid;
@@ -34,6 +56,7 @@
             width: 90%;
             max-width: 1000px;
             margin-top: 40px;
+	    padding-bottom: 50px;
         }
 
         .game-card {
@@ -45,12 +68,13 @@
     	    text-decoration: none;
     	    color: white !important;
     	    transition: 0.3s;
-    	    backdrop-filter: blur(5px);	
+    	    backdrop-filter: blur(10px);	
         }
 
         .game-card:hover {
             transform: translateY(-10px);
             background: rgba(0, 210, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
         }
 
         .play-btn {
@@ -60,6 +84,7 @@
             background: #e94560;
             border-radius: 5px;
             font-weight: bold;
+	    text-transform: uppercase;
         }
     </style>
 </head>
