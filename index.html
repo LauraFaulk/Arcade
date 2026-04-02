@@ -106,13 +106,14 @@
             }
 	}
 
-	#villain-img {
-    	    width: 60px; /* This shrinks your massive 1536px image down */
-    	    height: auto; /* Keeps the proportions perfect */
-    	    vertical-align: middle; /* Keeps it lined up with the text */
-    	    margin-left: 15px;
-    	    filter: drop-shadow(0 0 8px #ff007f); /* That neon glow */
-    	    border: 2px solid #ff007f; /* Temporary border so we can see it! */
+	#villain-hero {
+	    display: block;       /* Centers the image on its own line */
+    	    margin: 20px auto;    /* Adds space above and below the image */
+    	    width: 250px;         /* This makes the image a reasonable size */
+    	    height: auto;         /* Keeps the image from looking squished */
+    	    border-radius: 20px;  /* Softens the corners */
+    	    border: 3px solid #ff007f; /* A neon pink frame to match your vibe */
+    	    box-shadow: 0 0 20px rgba(255, 0, 127, 0.6); /* A glowing effect */
 	}
 	}
 
@@ -122,6 +123,8 @@
 
     <header>
         <h1>The Nerd Arcade</h1>
+	
+	<img src="villain2.jpeg" id="villain-hero" alt="The Villain">
         <p>Choose Your Punishment!</p>
     </header>
 
