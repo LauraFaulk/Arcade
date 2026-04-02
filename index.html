@@ -82,11 +82,23 @@
         .play-btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 20px;
-            background: #e94560;
-            border-radius: 5px;
-            font-weight: bold;
-	    text-transform: uppercase;
+            padding: 12px 25px;
+            background: #ff007f;
+	    color: white;
+            border-radius: 8px;
+	    font-family: 'Sour Gummy', sans-serif; 
+    	    font-size: 1.2rem;
+    	    font-weight: 700;
+    	    text-transform: uppercase;
+    	    letter-spacing: 1px;
+    
+    	    transition: 0.3s;
+            
+	    .play-btn:hover {
+    		background: #ff007f; /* Brighter pink on hover */
+    		box-shadow: 0 0 15px rgba(233, 69, 96, 0.8);
+    		transform: scale(1.05); /* Makes the button slightly grow */
+	    }
 	}
 
 	@media (max-width: 600px) {
