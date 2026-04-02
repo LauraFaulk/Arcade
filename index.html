@@ -1,31 +1,116 @@
-<a href="https://yourusername.github.io/my-game-portal/">← Back to Arcade</a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Game Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Arcade</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background: #f4f4f4; }
-        .container { margin-top: 50px; }
-        .card-container { display: flex; justify-content: center; gap: 20px; }
-        .game-card { 
-            padding: 20px; border: 1px solid #ccc; border-radius: 8px; 
-            background: white; width: 200px; text-decoration: none; color: black;
+        /* Modern Reset & Background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .game-card:hover { background: #e0e0e0; }
+
+        header {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00d2ff;
+        }
+
+        /* The Game Grid */
+        .arcade-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 40px;
+            padding-bottom: 50px;
+        }
+
+        /* Game Card Styling */
+        .game-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Hover Effects */
+        .game-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #00d2ff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-card h2 {
+            margin: 15px 0 10px;
+            color: #00d2ff;
+        }
+
+        .game-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        /* Button inside the card */
+        .play-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: #e94560;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Arcade</h1>
-    <div class="card-container">
-        <a class="game-card" href="https://yourusername.github.io/trivia-repo/">
-            <h3>Trivia Game</h3>
-            <p>Test your knowledge!</p>
+
+    <header>
+        <h1>Game Arcade</h1>
+        <p>Select a challenge to begin</p>
+    </header>
+
+    <div class="arcade-grid">
+        
+        <a href="https://yourusername.github.io/trivia-repo/" class="game-card">
+            <div style="font-size: 50px;">💡</div>
+            <h2>Trivia Quiz</h2>
+            <p>Multiple categories to test your general knowledge. High scores saved locally!</p>
+            <span class="play-btn">Play Now</span>
         </a>
-        <a class="game-card" href="https://yourusername.github.io/jeopardy-repo/">
-            <h3>Jeopardy</h3>
-            <p>The classic quiz game.</p>
+
+        <a href="https://yourusername.github.io/jeopardy-repo/" class="game-card">
+            <div style="font-size: 50px;">🔔</div>
+            <h2>Jeopardy</h2>
+            <p>Answer in the form of a question. The classic TV experience recreated.</p>
+            <span class="play-btn">Play Now</span>
         </a>
-    </div>
+
+        </div>
+
 </body>
 </html>
